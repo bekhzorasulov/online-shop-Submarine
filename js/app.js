@@ -1,9 +1,13 @@
 import "./mode.js";
 import request from "./request.js";
-import { updateHomeUI } from "./update.js";
+import { upDateHomeUI } from "./update.js";
 const logInEl = document.getElementById("logIn");
 const userInfo = document.getElementById("userInfo");
 const btnSubmite = document.getElementById("btnSubmite");
+
+request("https://dummyjson.com/products")
+  .then((data) => upDateHomeUI(data))
+  .catch((error) => console.log(error));
 
 logInEl.addEventListener("click", (e) => {
   e.preventDefault();
@@ -18,7 +22,3 @@ btnSubmite.addEventListener("click", (e) => {
     userInfo.classList.add("hidden");
   }
 });
-
-request("https://dummyjson.com/products")
-  .then((data) => updateHomeUI(data))
-  .catch((error) => console.log(error));

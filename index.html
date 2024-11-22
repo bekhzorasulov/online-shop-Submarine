@@ -14,7 +14,7 @@
     />
   </head>
   <body>
-    <header class="bg-base-300 mb-10">
+    <header class="bg-base-300 mb-20">
       <div class="align-elements navbar">
         <div class="navbar-start">
           <a
@@ -78,7 +78,7 @@
       <section>
         <div
           id="userInfo"
-          class="mx-auto max-w-xl px-10 flex items-center grid gap-5 hidden"
+          class="mx-auto max-w-xl px-10 items-center flex grid gap-5 hidden"
         >
           <label class="input input-bordered flex items-center gap-2">
             <input type="text" class="grow" placeholder="FirstName" />
@@ -138,27 +138,34 @@
       <section>
         <div
           id="products-container"
-          class="align-elements grid grid-cols-1 md:grid-cols-3"
-        ></div>
-        <template id="home-cart-template">
-          <div class="card bg-base-100 w-full shadow-xl">
-            <figure>
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes"
-              />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+          class="align-elements grid grid-cols-1 md:grid-cols-3 gap-10"
+        >
+          <template id="home-cart-template">
+            <a href="" class="card bg-base-100 w-full shadow-xl">
+              <figure>
+                <img
+                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <h2 class="card-title">Shoes!</h2>
+                <p id="description"></p>
+
+                <div class="flex flex-wrap justify-between">
+                  <div class="flex-col">
+                    <h5></h5>
+                    <span class="font-bold"></span>
+                  </div>
+                  <button onclick="" class="btn btn-secondary">Buy Now</button>
+                </div>
               </div>
-            </div>
-          </div>
-        </template>
+            </a>
+          </template>
+        </div>
       </section>
     </main>
+    <!-- LOADER -->
     <div
       id="loader"
       class="fixed bottom-0 left-0 top-0 w-full bg-black hidden bg-opacity-50 grid place-content-center"

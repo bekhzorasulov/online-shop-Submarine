@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./src/output.css" />
   </head>
   <body>
-    <header class="bg-base-300">
+    <header class="mb-20 bg-base-300">
       <div class="align-elements navbar">
         <div class="navbar-start">
           <a
@@ -67,6 +67,49 @@
         </div>
       </div>
     </header>
+    <main>
+      <section class="product-section">
+        <div class="align-elements">
+          <div
+            id="carousel"
+            class="carousel carousel-center bg-neutral rounded-box w-full space-x-4 p-4 h-96 hidden"
+          >
+            <template id="carousel-item">
+              <div id="" class="carousel-item bg-base-100">
+                <img src="" class="rounded-box pl-28" />
+              </div>
+            </template>
+          </div>
+          <img id="thumblain" src="" alt="" class="max-w-96" />
+          <h1 id="title"></h1>
+          <div class="flex gap-2 items-center my-5">
+            <p>Description:</p>
+            <q id="description" class="bg-base-300 p-3 rounded-md"></q>
+          </div>
+          <div class="flex gap-2 items-center my-5">
+            <p>Category:</p>
+            <h2 id="category" class="text-xl uppercase italic font-medium"></h2>
+          </div>
+          <div class="flex items-center my-5">
+            <p class="pr-3">Price:</p>
+            <h2 id="price" class="text-xl font-medium"></h2>
+            <p class="text-xl font-medium">$</p>
+          </div>
+          <div class="flex items-center my-5">
+            <p class="pr-3">Discount:</p>
+            <h2 id="discountPercentage" class="text-xl font-semibold"></h2>
+            <p class="font-semibold text-xl">%</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- LOADER -->
+    <div
+      id="loader"
+      class="fixed bottom-0 left-0 top-0 w-full bg-black hidden bg-opacity-50 grid place-content-center"
+    >
+      <span class="loading loading-dots loading-lg"></span>
+    </div>
     <script type="module" src="./js/product.js"></script>
   </body>
 </html>
